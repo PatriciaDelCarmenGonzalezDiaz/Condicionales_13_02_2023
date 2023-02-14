@@ -1,14 +1,18 @@
 //Condicional if_ else: solo evalua si una condicion es verdadera se realiza una accion
 // si no se cumple esa condicion se realiza otra diferente
+let num1 = Number(prompt("Escribe el primer número"));
+let num2 = Number(prompt("Escribe el segundo número"));
+let operacion = Number(prompt("Operacion a realizar, 1->Suma 2->Resta 3->Multiplicacion 4->Division"));
 
-let peso = Number(prompt("Cual es su peso?"));
-
-if (peso<=40) {
-   console.log(`Con el peso de ${peso}, creo que estas a punto de morir, COME ALGO`);
-} else if (peso > 40 && peso <= 70){
-    console.log(`Con el peso de ${peso}, creo que estas en buena condicion`);
-} else if (peso > 70 && peso < 90) {
-    console.log(`Con el peso de ${peso}, creo que estas con un poco de sobrepeso`);
-} else {
-    console.log(`Con el peso de ${peso}, creo que estas con bastante sobrepeso`);
+switch (operacion) {
+    case 1: console.warn(`${num1} + ${num2} = ${num1 + num2}`);
+    break;
+    case 2:console.warn(`${num1} - ${num2} = ${num1 - num2}`);
+    break;
+    case 3: console.warn(`${num1} * ${num2} = ${num1 * num2}`);
+    break;
+    case 4: console.warn(`${num1} / ${num2} = ${num1 / num2}`);
+    break;
+    default: console.warn("No dio un numero correcto para realizar una operación aritmética");
+    break;
 }
